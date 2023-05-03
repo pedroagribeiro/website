@@ -1,0 +1,22 @@
+---
+import Button from './Button.astro'
+import Divider from '../ui/Divider.astro'
+import EmailArt from './EmailArt.astro'
+---
+
+<div>
+    <div class="w-full flex flex-row justify-between h-20 items-center">
+        <div class="flex flex-row space-x-4 items-center">
+            <EmailArt />
+            <p class="text-secondary">pedroalgoribeiro@gmail.com</p>
+        </div>
+        <div class="flex flex-row space-x-2 text-secondary font-sans">
+            <Button title="LinkedIn" href="" />
+            <p>/</p>
+            <Button title="Dribbble" href="" />
+            <p>/</p>
+            <Button title="Instagram" href="" />
+        </div>
+    </div>
+    <Divider />
+</div>

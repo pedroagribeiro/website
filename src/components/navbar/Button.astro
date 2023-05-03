@@ -1,0 +1,16 @@
+---
+export interface Props {
+    title: string;
+    href: string;
+    target_blank?: boolean;
+    on?: boolean;
+}
+
+const { title, href, target_blank, on } = Astro.props;
+---
+
+<div class=`{${on ? "text-white" : "text-secondary"}}`>
+    <a href={href}>
+        {title}
+    </a>
+</div>
