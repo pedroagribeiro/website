@@ -26,10 +26,10 @@ const is_current_page = (page_slug: string): boolean => {
 <div>
     <Divider />
     <div class="w-full flex flex-row justify-between h-20 items-center">
-        <div class="flex flex-row space-x-4 items-center">
-            <p class="text-secondary">2023 All rights reserved.</p>
+        <div class="flex flex-row space-x-4 items-center px-8 md:px-0">
+            <p class="text-secondary text-sm md:text-md">pedroagribeiro</p>
         </div>
-        <div class="flex flex-row space-x-6 text-secondary font-sans">
+        <div class="flex flex-row space-x-4 md:space-x-6 text-secondary text-sm md:text-md px-8 md:px-0">
             {supported_pages.map((page) => (
                 is_current_page(page.slug) ?
                     <FadedText><Button title={page.name} href={page.slug} /></FadedText> : 
