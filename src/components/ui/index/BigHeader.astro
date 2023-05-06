@@ -1,0 +1,15 @@
+---
+import FadedText from '../FadedText.astro'
+
+export interface Props {
+    text: string
+}
+
+const { text } = Astro.props;
+---
+
+<div class="max-w-lg text-4xl font-medium">
+    <FadedText>
+        <p>{text}</p>
+    </FadedText>
+</div>

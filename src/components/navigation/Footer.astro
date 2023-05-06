@@ -1,0 +1,40 @@
+---
+import Button from '../navigation/Button.astro'
+import Divider from '../ui/Divider.astro'
+import FadedText from '../ui/FadedText.astro'
+
+const supported_pages = [
+    {
+        name: "Home",
+        slug: "/"
+    },
+    {
+        name: "Work",
+        slug: "/work"
+    },
+    {
+        name: "Blog",
+        slug: "/blog"
+    }
+]
+
+const is_current_page = (page_slug: string): boolean => {
+    return page_slug === Astro.url.pathname
+}
+---
+
+<div>
+    <Divider />
+    <div class="w-full flex flex-row justify-between h-20 items-center">
+        <div class="flex flex-row space-x-4 items-center">
+            <p class="text-secondary">2023 All rights reserved.</p>
+        </div>
+        <div class="flex flex-row space-x-6 text-secondary font-sans">
+            {supported_pages.map((page) => (
+                is_current_page(page.slug) ?
+                    <FadedText><Button title={page.name} href={page.slug} /></FadedText> : 
+                    <Button title={page.name} href={page.slug} />
+            ))}
+        </div>
+    </div>
+</div>

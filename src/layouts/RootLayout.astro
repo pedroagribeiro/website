@@ -1,4 +1,8 @@
 ---
+import Navbar from '../components/navigation/Navbar.astro'
+import Footer from '../components/navigation/Footer.astro'
+import '@fontsource/lexend'
+
 export interface Props {
     title: string;
 }
@@ -15,13 +19,11 @@ const { title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
-    <body class="bg-primary px-48">
-        <slot />
+    <body class="bg-primary px-32 xl:px-48 2xl:px-96">
+        <main>
+            <Navbar />
+            <slot />
+            <Footer />
+        </main>
     </body>
 </html>
-
-<style is:global>
-	body {
-		font-family: "Lexend", sans-serif;
-	}
-</style>
