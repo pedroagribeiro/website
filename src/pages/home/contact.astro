@@ -1,0 +1,58 @@
+---
+import RootLayout from '../../layouts/RootLayout.astro'
+import BigHeader from '../../components/ui/BigHeader.astro'
+import BodyText from '../../components/ui/BodyText.astro'
+import FadedText from '../../components/ui/FadedText.astro'
+import ButtonIcon from '../../components/ui/ButtonIcon.astro'
+---
+
+<RootLayout title="Contact me">
+    <div class="flex flex-col space-y-8 py-16 items-center text-center ">
+        <div class="flex flex-col space-y-0">
+		    <BigHeader text="Got a project?" />
+            <BigHeader text="Let's talk?" />
+        </div>
+        <BodyText>
+            <p>I have a lot of experience developing performant web applications, therefore I can
+                help you turn your idea into a working project, just how you want it.
+            </p>
+        </BodyText>
+        <BodyText>
+            <p>
+                Want to get an estimation for my services? Want to question me about the feasibility
+                of your idea? Feel free to contact me.
+            </p>
+        </BodyText>
+	</div>
+    <div class="flex flex-col space-y-8 mb-16 md:px-12 lg:px-48 xl:px-60 2xl:px-80">
+        <form class="flex flex-col space-y-6 py-6 px-6 border border-secondary">
+            <div class="flex flex-col space-y-2">
+                <div class="text-2xl font-medium">
+                    <FadedText>
+                        <p>What is your name?</p>
+                    </FadedText>
+                    <input class="w-full bg-terciary py-1 px-2 text-sm text-secondary font-normal border border-secondary" type="text" id="name">
+                </div>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <div class="text-2xl font-medium">
+                    <FadedText>
+                        <p>What is your email?</p>
+                    </FadedText>
+                </div>
+                <input class="w-full bg-terciary py-1 px-2 text-sm text-secondary font-normal border border-secondary" type="email" id="email">
+            </div>
+            <div class="flex flex-col space-y-2">
+                <div class="text-2xl font-medium">
+                    <FadedText>
+                        <p>What do you want to discuss?</p>
+                    </FadedText>
+                </div>
+                <textarea class="w-full bg-terciary py-1 px-2 text-sm text-secondary font-normal border border-secondary" id="subject">Use this space to explain to me what you want to discuss with me</textarea>
+            </div>
+            <div class="flex flex-col items-center pt-6">
+                <ButtonIcon title="Submit" href="/home" icon="send" />
+            </div>
+        </form>
+    </div>
+</RootLayout>

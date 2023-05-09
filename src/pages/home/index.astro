@@ -1,9 +1,9 @@
 ---
-import RootLayout from '../layouts/RootLayout.astro';
-import ButtonIcon from '../components/ui/ButtonIcon.astro'
-import Divider from '../components/ui/Divider.astro'
-import BigHeader from '../components/ui/index/BigHeader.astro'
-import SkillCard from '../components/ui/index/SkillCard.astro'
+import RootLayout from '../../layouts/RootLayout.astro';
+import ButtonIcon from '../../components/ui/ButtonIcon.astro'
+import Divider from '../../components/ui/Divider.astro'
+import BigHeader from '../../components/ui/BigHeader.astro'
+import SkillCard from '../../components/ui/index/SkillCard.astro'
 ---
 
 <RootLayout title="Start">
@@ -37,6 +37,6 @@ import SkillCard from '../components/ui/index/SkillCard.astro'
 	<Divider />
 	<div class="flex flex-col items-center text-center space-y-12 py-20">
 		<BigHeader text="Tell me about your next project idea." />
-		<ButtonIcon title="Contact me" href="" icon="email" />
+		<ButtonIcon title="Contact me" href="/home/contact" icon="email" />
 	</div>
 </RootLayout>
